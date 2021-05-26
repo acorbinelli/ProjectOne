@@ -17,7 +17,7 @@ const HeroNavButton = ({ value, text, icon, className }) => {
   return (
     <HeroNavButtonStyled href='#' value={value} className={className}>
       <i className={icon} />
-      <h2>{text}</h2>
+      <span style={{ fontSize: "2rem", color: "white" }}>{text}</span>
     </HeroNavButtonStyled>
   )
 }

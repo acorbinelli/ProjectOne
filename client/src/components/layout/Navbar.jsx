@@ -7,6 +7,7 @@ import NavbarItems from "../navbar/NavbarItems"
 const Wrapper = styled.nav`
   background-color: ${Colors.mediumslateblue};
   height: 5rem;
+  display: flex;
 
   position: relative;
 `

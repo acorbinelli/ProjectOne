@@ -51,31 +51,47 @@ button {
     
 }
 .button__secondary{    
-    transition: 0.3s background-color;    
+    transition: 0.3s background-color; 
+    height: 100%;   
     i,h2{
-        color: ${Colors.fuchsia};
+        color: white;
         font-size: 2rem;
     }
     :hover {
       background: ${Colors.mediumslateblue};
-      height: 100%;
+     
       cursor: pointer;
       i,h2{
         color: ${Colors.canary};
+
       }
-      i{
-          font-size: 4rem;
-      }
-      h2{
-          font-weight: 700;
-      }
+      box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.4);
+     
     }    
+    :active{
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.4);
+
+    }
+    :focus{
+        background: ${Colors.mediumslateblue};
+        border-bottom: 5px solid white;
+        
+
+
+    }
 }
 
 h1{
     font-size: 4rem;
     letter-spacing: 0.3rem;
     font-weight: 600;
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    
+    margin-bottom: 2rem;
 }
 `
 

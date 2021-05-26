@@ -3,6 +3,7 @@ import Section from "../layout/Section"
 import styled from "styled-components"
 
 import HeroNav from "./HeroNav"
+import HeroPage from "./HeroPage"
 
 const Wrapper = styled.div`
   background-color: white;
@@ -21,6 +22,7 @@ const Hero = () => {
     <Section imageURL='../../IMG/hero_2.jpg' flexDirection='row'>
       <Wrapper>
         <HeroNav />
+        <HeroPage />
       </Wrapper>
     </Section>
   )

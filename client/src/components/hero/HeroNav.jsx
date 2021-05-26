@@ -7,7 +7,7 @@ import HeroNavButton from "./HeroNavButton"
 const HeroNavStyled = styled.nav`
   height: 20%;
   box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.4);
-  background-color: ${Colors.mediumslatebluealpha};
+  background-color: ${Colors.fuchsia};
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 `

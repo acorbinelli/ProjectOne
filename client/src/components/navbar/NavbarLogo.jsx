@@ -8,6 +8,7 @@ const Logo = styled.h1`
   padding: 1rem 2rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
+  margin: 0;
 `
 
 const NavbarLogo = () => {

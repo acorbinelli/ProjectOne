@@ -14,9 +14,22 @@ html{
     font-size: 10px;
 }
 
+
+section{
+    width: 100vw;
+    padding: 10rem 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button {
-    padding: 0.3rem 1rem;
-    border-radius: 1rem;
+    padding: 0.3rem 1rem;    
     text-decoration: none;
     border: none;
     background: none;
@@ -29,11 +42,40 @@ button {
 .button__primary{
     color: ${Colors.canary};
     transition: 0.3s background-color;
+    border-radius: 1rem;
     :hover {
       background: ${Colors.canary};
       color: ${Colors.mediumslateblue};
       cursor: pointer;
     }
+    
+}
+.button__secondary{    
+    transition: 0.3s background-color;    
+    i,h2{
+        color: ${Colors.fuchsia};
+        font-size: 2rem;
+    }
+    :hover {
+      background: ${Colors.mediumslateblue};
+      height: 100%;
+      cursor: pointer;
+      i,h2{
+        color: ${Colors.canary};
+      }
+      i{
+          font-size: 4rem;
+      }
+      h2{
+          font-weight: 700;
+      }
+    }    
+}
+
+h1{
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
 }
 `
 

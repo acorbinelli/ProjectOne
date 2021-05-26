@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { Colors } from "../../constants/colors"
 
-const CompanyItems = styled.ul`
+const NavbarCompanyStyled = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
+  margin-right: 25vw;
   li {
     margin: auto 2rem;
   }
@@ -13,7 +13,7 @@ const CompanyItems = styled.ul`
 
 const NavbarCompany = () => {
   return (
-    <CompanyItems>
+    <NavbarCompanyStyled>
       <li>
         <button href='#' value='Company' className='button__primary'>
           Company
@@ -29,7 +29,7 @@ const NavbarCompany = () => {
           Help
         </button>
       </li>
-    </CompanyItems>
+    </NavbarCompanyStyled>
   )
 }
 

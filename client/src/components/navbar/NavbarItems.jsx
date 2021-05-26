@@ -1,5 +1,4 @@
 import React, { Fragment } from "react"
-
 import NavbarLogin from "./NavbarLogin"
 import NavbarCompany from "./NavbarCompany"
 

@@ -1,11 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-const LoginItems = styled.ul`
-  position: absolute;
-  right: 0;
+const NavbarLoginStyled = styled.ul`
   list-style: none;
-  padding: 1rem 2 rem;
   display: flex;
   flex-direction: row;
 
@@ -16,7 +13,7 @@ const LoginItems = styled.ul`
 
 const NavbarLogin = () => {
   return (
-    <LoginItems>
+    <NavbarLoginStyled>
       <li>
         <button href='#' value='EN' className='button__primary'>
           EN
@@ -32,7 +29,7 @@ const NavbarLogin = () => {
           Sign Up
         </button>
       </li>
-    </LoginItems>
+    </NavbarLoginStyled>
   )
 }
 

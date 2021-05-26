@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Colors } from "../../constants/colors"
 
 const Logo = styled.h1`
-  color: ${Colors.canary};
+  color: ${Colors.white};
   font-size: 2rem;
   padding: 1rem 2rem;
   font-weight: 600;

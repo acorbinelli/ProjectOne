@@ -40,11 +40,11 @@ button {
 }
 
 .button__primary{
-    color: ${Colors.canary};
+    color: ${Colors.white};
     transition: 0.3s background-color;
     border-radius: 1rem;
     :hover {
-      background: ${Colors.canary};
+      background: ${Colors.white};
       color: ${Colors.mediumslateblue};
       cursor: pointer;
     }
@@ -62,7 +62,7 @@ button {
      
       cursor: pointer;
       i,h2{
-        color: ${Colors.canary};
+        color: ${Colors.white};
 
       }
       box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.4);

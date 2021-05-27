@@ -5,6 +5,8 @@ import styled from "styled-components"
 import HeroNav from "./HeroNav"
 import HeroPage from "./HeroPage"
 
+import { HeroProvider } from "./HeroContext"
+
 const Wrapper = styled.div`
   background-color: white;
   height: 50rem;
@@ -19,12 +21,14 @@ const Wrapper = styled.div`
 
 const Hero = () => {
   return (
-    <Section imageURL='../../IMG/hero_2.jpg' flexDirection='row'>
-      <Wrapper>
-        <HeroNav />
-        <HeroPage />
-      </Wrapper>
-    </Section>
+    <HeroProvider>
+      <Section imageURL='../../IMG/hero_2.jpg' flexDirection='row'>
+        <Wrapper>
+          <HeroNav />
+          <HeroPage />
+        </Wrapper>
+      </Section>
+    </HeroProvider>
   )
 }
 

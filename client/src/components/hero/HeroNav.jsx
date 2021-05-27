@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { Colors } from "../../constants/colors"
-import { Icons } from "../../constants/icons"
+
 import HeroNavButton from "./HeroNavButton"
+import { HeroContext } from "./HeroContext"
 
 const HeroNavStyled = styled.nav`
   height: 20%;
@@ -13,38 +14,13 @@ const HeroNavStyled = styled.nav`
 `
 
 const HeroNav = (props) => {
+  const [hero, setHero] = useContext(HeroContext)
+
   return (
     <HeroNavStyled>
-      <HeroNavButton
-        value='Parents'
-        text='Parents'
-        icon={Icons.users}
-        className='button__secondary'
-      >
-        {props.children}
-      </HeroNavButton>
-      <HeroNavButton
-        value='Educators'
-        text='Educators'
-        icon={Icons.educator}
-        className='button__secondary'
-      >
-        {props.children}
-      </HeroNavButton>
-      <HeroNavButton
-        value='Business'
-        text='Business'
-        icon={Icons.briefcase}
-        className='button__secondary'
-      >
-        {props.children}
-      </HeroNavButton>
-      {/* <button href='#' value='Parents' className='button__primary'>
-        <i class='fas fa-user-friends'></i>Parents
-      </button>
-      <button href='#' value='Educators' className='button__primary'>
-        <i class='fas fa-user-friends'></i>Educators
-      </button> */}
+      {hero.map((e) => (
+        <HeroNavButton data={e} key={e.id}></HeroNavButton>
+      ))}
     </HeroNavStyled>
   )
 }

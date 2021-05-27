@@ -47,8 +47,14 @@ button {
       background: ${Colors.white};
       color: ${Colors.mediumslateblue};
       cursor: pointer;
+      box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+
     }
-    
+   
+    :active{
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }    
 }
 .button__secondary{    
     transition: 0.3s background-color; 
@@ -65,20 +71,44 @@ button {
         color: ${Colors.white};
 
       }
-      box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+
      
     }    
     :active{
-        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 
     }
-    :focus{
+    &--focused{
         background: ${Colors.mediumslateblue};
         border-bottom: 5px solid white;
         
 
 
     }
+
+
+}
+
+
+
+.button__special{
+    color: ${Colors.white};
+    background: ${Colors.mediumslateblue};
+    transition: 0.3s background-color;
+    font-size: 1.8rem;
+    :hover {
+      background: ${Colors.fuchsia};
+      box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+      
+      cursor: pointer;
+    }
+    :active{
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }
+    
 }
 
 h1{

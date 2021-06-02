@@ -1,7 +1,6 @@
-import React from "react"
 import Section from "../layout/Section"
 import styled from "styled-components"
-
+import React from "react"
 import HeroNav from "./HeroNav"
 import HeroPage from "./HeroPage"
 

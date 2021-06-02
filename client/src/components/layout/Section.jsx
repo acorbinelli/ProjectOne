@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useContext, useEffect, useState } from "react"
 import styled from "styled-components"
+
+import { HeroContext } from "../hero/HeroContext"
 
 const SectionStyled = styled.section`
   background-image: url(${({ backGroundIMG }) => backGroundIMG});
@@ -9,13 +11,22 @@ const SectionStyled = styled.section`
   background-color: ${({ bgColor }) => bgColor};
   flex-direction: ${({ flexDirection }) => flexDirection};
   overflow: hidden;
+  transition: 0.2s all;
 `
 
 const Section = (props) => {
+  const [heroContext] = useContext(HeroContext)
+  const [backGround, setBackGround] = useState("")
+  useEffect(() => {
+    console.log("changing")
+    heroContext.map((e) =>
+      e.focused === true ? setBackGround(e.picture) : "black"
+    )
+  }, [heroContext])
+
   return (
     <SectionStyled
-      backGroundIMG={props.imageURL}
-      bgColor={props.bgColor}
+      backGroundIMG={backGround}
       flexDirection={props.flexDirection}
     >
       {props.children}

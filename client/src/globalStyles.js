@@ -97,6 +97,7 @@ button {
     background: ${Colors.mediumslateblue};
     transition: 0.3s background-color;
     font-size: 1.8rem;
+    padding: 1.5rem 2rem;
     :hover {
       background: ${Colors.fuchsia};
       box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);

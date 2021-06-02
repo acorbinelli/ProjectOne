@@ -14,11 +14,11 @@ const HeroNavStyled = styled.nav`
 `
 
 const HeroNav = (props) => {
-  const [hero, setHero] = useContext(HeroContext)
+  const [heroContext, setHeroContext] = useContext(HeroContext)
 
   return (
     <HeroNavStyled>
-      {hero.map((e) => (
+      {heroContext.map((e) => (
         <HeroNavButton data={e} key={e.id}></HeroNavButton>
       ))}
     </HeroNavStyled>

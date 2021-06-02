@@ -1,7 +1,16 @@
 import React, { useContext, useEffect, useState } from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { Colors } from "../../constants/colors"
 import { HeroContext } from "./HeroContext"
+const fade = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`
 
 const HeroPageStyled = styled.div`
   height: 100%;
@@ -13,24 +22,22 @@ const HeroPageStyled = styled.div`
 `
 
 const HeroPage = () => {
-  const [hero] = useContext(HeroContext)
+  const [heroContext, setHeroContext] = useContext(HeroContext)
 
-  let storyItem = hero.map((e) => (e.focused ? e.story : e.story))
-  const [story, setStory] = useState(storyItem)
-
-  const updateStoryItem = () => {
-    storyItem = hero.map((e) => (e.focused ? e.story : e.story))
-  }
-
-  useEffect(() => {
-    setStory(updateStoryItem)
-  }, [hero])
+  let storyItem = {}
+  heroContext.map((e) => (e.focused ? (storyItem = e) : {}))
 
   return (
     <HeroPageStyled>
-      <h1>{story[0][1].title}</h1>
-      <h2>{story[0][1].content}</h2>
-      <button className='button__special'>Sign Up</button>
+      <h1>{storyItem.story[0].title}</h1>
+      <h2>{storyItem.story[0].content}</h2>
+      {storyItem.buttons
+        ? React.createElement(
+            "button",
+            { className: "button__special" },
+            `${storyItem.buttons}`
+          )
+        : ""}
     </HeroPageStyled>
   )
 }

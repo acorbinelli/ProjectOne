@@ -1,18 +1,21 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useContext } from "react"
 
 import Navbar from "./components/layout/Navbar"
 import Hero from "./components/hero/Hero"
 
 import GlobalStyles from "./globalStyles"
+import { LanguageProvider } from "./LanguageContext"
 
 function App() {
   return (
     <Fragment>
       <GlobalStyles />
-      <main id='main'>
-        <Navbar />
-        <Hero />
-      </main>
+      <LanguageProvider>
+        <main id='main'>
+          <Navbar />
+          <Hero />
+        </main>
+      </LanguageProvider>
     </Fragment>
   )
 }

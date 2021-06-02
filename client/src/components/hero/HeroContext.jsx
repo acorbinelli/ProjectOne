@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react"
+import React, { useState, createContext } from "react"
 import { Icons } from "../../constants/icons"
 
 export const HeroContext = createContext()
@@ -7,7 +7,7 @@ export const HeroProvider = (props) => {
   const [hero, setHero] = useState([
     {
       id: "1",
-      value: "Parents",
+      value: { en: "Parents", ro: "Parinti" },
       icon: `${Icons.users}`,
       type: "secondary",
       focused: true,
@@ -26,11 +26,12 @@ export const HeroProvider = (props) => {
           content: "Lorem ipsum 120",
         },
       ],
-      buttons: "Get Started!",
+      buttons: { en: "Get Started!", ro: "Incepe acum!" },
+      learnMore: { en: "Learn More!", ro: "Afla mai multe!" },
     },
     {
       id: "2",
-      value: "Educators",
+      value: { en: "Educators", ro: "Educatori" },
 
       icon: `${Icons.educator}`,
       type: "secondary",
@@ -44,7 +45,8 @@ export const HeroProvider = (props) => {
         { title: "12321312", content: "321321" },
         { title: "asdsadsadsa13r23", content: "Lorem ipsum 120" },
       ],
-      buttons: "Educate!",
+      buttons: { en: "Educate!", ro: "Educa!" },
+      learnMore: { en: "Learn More!", ro: "Afla mai multe!" },
     },
     {
       id: "3",
@@ -62,7 +64,8 @@ export const HeroProvider = (props) => {
         { title: "8f1n383n2f", content: "Lorem ipsum 70" },
         { title: "c8h18h19uh", content: "Lorem ipsum 120" },
       ],
-      buttons: "Register Business",
+      buttons: { en: "Register Business", ro: "Inregistreaza un business" },
+      learnMore: { en: "Learn More!", ro: "Afla mai multe!" },
     },
   ])
 

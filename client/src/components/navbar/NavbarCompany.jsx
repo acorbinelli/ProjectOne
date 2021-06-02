@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useContext } from "react"
 import styled from "styled-components"
+import { LanguageContext } from "../../LanguageContext"
 
 const NavbarCompanyStyled = styled.ul`
   list-style: none;
@@ -12,21 +13,23 @@ const NavbarCompanyStyled = styled.ul`
 `
 
 const NavbarCompany = () => {
+  const [language] = useContext(LanguageContext)
+
   return (
     <NavbarCompanyStyled>
       <li>
         <button href='#' value='Company' className='button__primary'>
-          Company
+          {language === "en" ? "Company" : "Companie"}
         </button>
       </li>
       <li>
         <button href='#' value='Prices' className='button__primary'>
-          Prices
+          {language === "en" ? "Prices" : "Preturi"}
         </button>
       </li>
       <li>
         <button href='#' value='Help' className='button__primary'>
-          Help
+          {language === "en" ? "Help" : "Ajutor"}
         </button>
       </li>
     </NavbarCompanyStyled>

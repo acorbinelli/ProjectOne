@@ -1,16 +1,8 @@
-import React, { useContext, useEffect, useState } from "react"
-import styled, { keyframes } from "styled-components"
-import { Colors } from "../../constants/colors"
-import { HeroContext } from "./HeroContext"
-const fade = keyframes`
-  from {
-    opacity: 0;
-  }
+import React, { useContext } from "react"
+import styled from "styled-components"
 
-  to {
-    opacity: 1;
-  }
-`
+import { HeroContext } from "./HeroContext"
+import { LanguageContext } from "../../LanguageContext"
 
 const HeroPageStyled = styled.div`
   height: 100%;
@@ -22,7 +14,8 @@ const HeroPageStyled = styled.div`
 `
 
 const HeroPage = () => {
-  const [heroContext, setHeroContext] = useContext(HeroContext)
+  const [heroContext] = useContext(HeroContext)
+  const [language] = useContext(LanguageContext)
 
   let storyItem = {}
   heroContext.map((e) => (e.focused ? (storyItem = e) : {}))
@@ -38,6 +31,7 @@ const HeroPage = () => {
             `${storyItem.buttons}`
           )
         : ""}
+      <a href='#'>{storyItem.learnMore}</a>
     </HeroPageStyled>
   )
 }

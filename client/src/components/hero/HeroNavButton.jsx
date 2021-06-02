@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 
 import { HeroContext } from "./HeroContext"
+import { LanguageContext } from "../../LanguageContext"
 
 const HeroNavButtonStyled = styled.button`
   display: flex;
@@ -16,6 +17,7 @@ const HeroNavButtonStyled = styled.button`
 
 const HeroNavButton = ({ data }) => {
   const [hero, setHero] = useContext(HeroContext)
+  const [language] = useContext(LanguageContext)
   const setHeroHandler = () => {
     let heroNew = [...hero]
 
@@ -35,7 +37,9 @@ const HeroNavButton = ({ data }) => {
       }`}
     >
       <i className={data.icon} />
-      <span style={{ fontSize: "2rem", color: "white" }}>{data.value}</span>
+      <span style={{ fontSize: "2rem", color: "white" }}>
+        {language === "en" ? data.value.en : data.value.ro}
+      </span>
     </HeroNavButtonStyled>
   )
 }

@@ -14,7 +14,7 @@ const HeroNavStyled = styled.nav`
 `
 
 const HeroNav = (props) => {
-  const [heroContext, setHeroContext] = useContext(HeroContext)
+  const [heroContext] = useContext(HeroContext)
 
   return (
     <HeroNavStyled>
